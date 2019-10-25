@@ -18,12 +18,11 @@ public class db_control {
 	boolean checkConnection(){
 
 		try {
-			mpCon = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/metportdb", "root", "nkforever2019");
+			mpCon = DriverManager.getConnection("jdbc:mysql://google/medport?cloudSqlInstance=medport&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false&user=<MYSQL_USER_NAME>&password=<MYSQL_USER_PASSWORD>");
 
 			return true;
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 
 			return false;
 		}
